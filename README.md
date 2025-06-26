@@ -24,15 +24,16 @@ pip install -r requirements.txt
 pip install dhis2.py
 
 ## docker
-
+```
 docker build -t dhs-app .
-
 docker run -p 8050:8000 --name dhs-app
+```
 
 - clear docker cache
-
+```
 docker builder prune -f 
-
+```
 - on the browser
-
+```
 http://localhost:8050
+```
