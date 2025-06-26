@@ -1,13 +1,11 @@
-# dhis2-health-analytics
-DHIS2 data for health analytics. We focus on COVID data
- Step 1: use demo covid data from  DHIS2 demo instance at https://play.dhis2.org/demo
- metadata: https://play.dhis2.org/demo/api/metadata 
- Step 2: Use actual covid data 
 
-Sample Data 
-https://dhis2.org/downloads/
+## dhis2-health analytics
 
-## set up virtual environment
+A dash web application to visualise dhis2 data.
+
+Sample Data for Sierra Leone is downloaded from the dhis2 link: https://dhis2.org/downloads/
+
+## local set up
 
 ```
 python3 -m venv dhis2
@@ -20,8 +18,10 @@ Then install the requirements:
 pip install -r requirements.txt
 ```
 
-# libs
-pip install dhis2.py
+To launch the app:
+```
+python src/app.py
+```
 
 ## docker
 ```
@@ -37,3 +37,5 @@ docker builder prune -f
 ```
 http://localhost:8050
 ```
+
+## azure set up
