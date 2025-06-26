@@ -1,0 +1,13 @@
+polars
+pandas
+dash
+plotly
+numpy
+dagster
+geopandas
+scikit-learn
+mlflow
+nbformat
+osmnx
+gunicorn
+gevent
