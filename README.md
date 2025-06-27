@@ -24,15 +24,18 @@ python src/app.py
 ```
 
 ## docker
-```
-docker build -t dhs-app .
-docker run -p 8050:8000 --name dhs-app
-```
 
 - clear docker cache
 ```
 docker builder prune -f 
 ```
+- Build the docker image
+
+```
+docker build -t dhs-app .
+docker run -p 8050:8000 --name dhs-app
+```
+
 - on the browser
 ```
 http://localhost:8050
