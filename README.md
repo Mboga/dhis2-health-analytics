@@ -38,4 +38,14 @@ docker builder prune -f
 http://localhost:8050
 ```
 
-## azure set up
+## deploy on azure
+
+
+## deploy on aws
+
+
+## deploy on gcp
+
+
+
+
