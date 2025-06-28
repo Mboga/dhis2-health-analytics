@@ -41,14 +41,54 @@ docker run -p 8050:8000 --name dhs-app
 http://localhost:8050
 ```
 
-## deploy on azure
-
-
-## deploy on aws
-
-
 ## deploy on gcp
+- set up gcp authentication
+```
+ gcloud auth login
+```
+- List all gcloud projects list
+```
+gcloud projects list
+
+```
+
+- Set the default project for your gcloud CLI session
+
+```
+ gcloud config set project your_project_id
+
+ ```
+For example:
+```
+ gcloud config set project api-project-507320880300
+
+ ```
+
+- use Cloud build to build your image and push it to google containers registry in one step
+
+```
+gcloud builds submit --tag gcr.io/api-project-507320880300/dhs-app:latest .
+
+```
 
 
+- run the app
 
+```
+gcloud run deploy dhs-app-service \
+    --image gcr.io/api-project-507320880300/dhs-app:latest \
+    --region europe-west1 \
+    --platform managed \
+    --allow-unauthenticated \
+    --port 8000 \
+    --project api-project-507320880300
+
+```
+
+success !
+The app will be live in the url:
+```
+https://dhs-app-service-507320880300.europe-west1.run.app
+
+```
 
